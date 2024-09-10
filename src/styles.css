@@ -10,7 +10,12 @@
 }
 
 * {
+  font-family: "Courier New", Courier, monospace;
   margin: 0;
+}
+
+body {
+  background: rgb(255, 219, 88);
 }
 
 img,
@@ -29,23 +34,114 @@ select {
   font: inherit;
 }
 
+/* p {
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+} */
+
 #root,
 #__next {
   isolation: isolate;
 }
 
-.main {
-  border: 2px solid f9f9f9;
-  /* display: flex;
-  flex-direction: column; */
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+button {
+  cursor: pointer;
+  background-color: rgb(104, 195, 212);
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 4px;
 }
 
-.main .heading {
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 40px;
+  border-radius: 8px;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.header .heading {
   text-transform: capitalize;
+  padding-bottom: 5px;
+}
+
+.todoForm {
+  margin-bottom: 20px;
+}
+
+.todoForm form {
+  display: flex;
+}
+
+.todoForm .todoInput {
+  height: 40px;
+  flex-grow: 2;
+  margin-right: 0.5rem;
+  border-radius: 4px;
+  padding: 0 10px;
+}
+
+.todoForm .todoButton {
+  height: 40px;
+  width: 40px;
+}
+
+.todoInput,
+.todoButton {
+  border: 3px solid black;
+}
+
+.todoListSection ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.todoListSection .todoItem {
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  background-color: rgb(212, 197, 226);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.todoItem p {
+  font-weight: bold;
+}
+
+.todoItem .taskCheckbox {
+  margin-right: 8px;
+  min-height: 20px;
+  min-width: 20px;
+}
+
+.todoItem .deleteButton {
+  margin-left: auto;
+}
+
+.noTodosSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.noTodosSection img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.noTodosSection p {
+  font-size: 1.2rem;
+  max-width: 350px;
+  text-align: center;
 }

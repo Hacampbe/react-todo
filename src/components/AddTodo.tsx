@@ -21,14 +21,17 @@ export default function AddTodo({ addTodo }: AddTodoProps) {
   };
 
   return (
-    <form onSubmit={handleAddTodo}>
-      <input
-        type="text"
-        placeholder="Write your next todo"
-        value={input}
-        onChange={handleChange}
-      />
-      <button type="submit">+</button>
-    </form>
+    <footer className="todoForm">
+      <form onSubmit={handleAddTodo}>
+        <input
+          type="text"
+          placeholder="Write your next todo"
+          value={input}
+          onChange={handleChange}
+          className="todoInput"
+        />
+        <button type="submit" className="todoButton">+</button>
+      </form>
+    </footer>
   );
 }

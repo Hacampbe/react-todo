@@ -3,3 +3,5 @@ export interface Todo {
   task: string;
   isCompleted: boolean;
 }
+
+export type ToggleTodo = (id: number) => void;

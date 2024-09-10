@@ -7,9 +7,9 @@ export default function Header() {
   });
 
   return (
-    <>
+    <header className="header">
       <h1 className="heading">My day</h1>
       <p className="date">{formattedDate}</p>
-    </>
+    </header>
   );
 }
